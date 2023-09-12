@@ -5,11 +5,12 @@ import com.spring.BeanNameAware;
 import com.spring.Component;
 
 @Component
-public class UserService implements BeanNameAware {
+public class UserService implements UserInterFace, BeanNameAware {
 
     @Autowired
     private OrderService orderService;
 
+    @Override
     public void test(){
         orderService.test();
         System.out.println("userService test");
